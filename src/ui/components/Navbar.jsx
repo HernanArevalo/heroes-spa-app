@@ -7,7 +7,9 @@ export const Navbar = () => {
 
 
     const onLogout = () => {
-        navigate('/login')
+        navigate('/login', {
+            replace: true
+        })
     };
 
     return (

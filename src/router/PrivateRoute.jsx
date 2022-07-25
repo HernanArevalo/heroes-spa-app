@@ -6,8 +6,12 @@ import { AuthContext } from "../auth";
 export const PrivateRoute = ({ children }) => {
 
     const { logged } = useContext( AuthContext )
-    const location = useLocation();
-    console.log(location )
+
+    const { pathname, search } = useLocation();
+
+    const lastPath = pathname + search
+    localStorage.setItem( 'lastPath', lastPath )
+
     return (logged)
     ? children
     : <Navigate to='/login'/>

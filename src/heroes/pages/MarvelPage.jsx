@@ -1,4 +1,4 @@
-import { HeroList } from "../components"
+import { HeroList } from '../components';
 
 export const MarvelPage = () => {
   return (
